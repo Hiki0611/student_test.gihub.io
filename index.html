@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Иван Петров - Риелтор</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фиксированный навбар -->
+    <nav class="navbar">
+        <img src="images/user.webp" alt="Фото риелтора" class="nav-logo">
+        <ul>
+            <li><a href="#about">Обо мне</a></li>
+            <li><a href="#houses">Дома</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- Основной контент с секциями -->
+    <main class="snap-container">
+        <!-- Секция "Обо мне" -->
+        <section id="about" class="section">
+            <div class="content animate">
+                <h1>Иван Петров</h1>
+                <p class="short-info">Профессиональный риелтор с 10-летним опытом.</p>
+                <button class="details-btn">Подробнее</button>
+                <p class="full-info hidden">Я помогаю людям находить дома их мечты. Специализируюсь на современных решениях и индивидуальном подходе. Работаю быстро, честно и с душой.</p>
+            </div>
+        </section>
+
+        <!-- Секция "Дома" -->
+        <section id="houses" class="section">
+            <div class="houses-grid animate"></div>
+        </section>
+
+        <!-- Секция "Контакты" -->
+        <section id="contacts" class="section">
+            <div class="content animate">
+                <h1>Контакты</h1>
+                <p>Телефон: +7 (999) 123-45-67</p>
+                <p>Email: ivan@realtor.ru</p>
+                <p>Telegram: @IvanRealtor</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Плавающая кнопка "Позвонить" -->
+    <a href="tel:+79991234567" class="call-btn">📞</a>
+
+    <script src="animations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

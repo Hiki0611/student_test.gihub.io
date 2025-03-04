@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Коттедж у озера",
+        "price": "5,000,000 ₽",
+        "location": "Московская область",
+        "electricity": "Да",
+        "hotWater": "Да",
+        "description": "Уютный коттедж с видом на озеро.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    },
+    {
+        "name": "Дом в лесу",
+        "price": "3,800,000 ₽",
+        "location": "Ленинградская область",
+        "electricity": "Да",
+        "hotWater": "Нет",
+        "description": "Тихий дом в окружении природы.",
+        "mapLink": "https://maps.google.com",
+        "image": "images/house.jpg"
+    }
+]

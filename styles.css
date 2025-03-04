@@ -1,0 +1,275 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    background-size: 200% 200%;
+    animation: gradientFlow 15s ease infinite;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 12, 41, 0.6); /* Темно-синий с прозрачностью вместо черного */
+    z-index: -1;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Навбар */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(48, 43, 99, 0.9); /* Темно-фиолетовый вместо черного */
+    z-index: 1000;
+}
+
+.nav-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #c400ff;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    text-shadow: 0 0 10px #c400ff;
+    color: #c400ff;
+}
+
+/* Snap Scroll */
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Анимации появления */
+.animate {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate button {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Секция "Обо мне" */
+#about .content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #c400ff;
+}
+
+.short-info {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.details-btn {
+    background: none;
+    border: 2px solid #c400ff;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.details-btn:hover {
+    background: #c400ff;
+    box-shadow: 0 0 15px #c400ff;
+}
+
+.full-info {
+    margin-top: 20px;
+    font-size: 16px;
+    max-width: 600px;
+    transition: all 0.5s ease;
+}
+
+.full-info.hidden {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Секция "Дома" */
+.houses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.house-card {
+    background: rgba(36, 36, 62, 0.9); /* Темно-синий вместо черного */
+    border: 2px solid #c400ff;
+    border-radius: 10px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+.house-card.visible {
+    opacity: 1;
+}
+
+.house-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #c400ff;
+}
+
+.house-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.house-card img.loaded {
+    opacity: 1;
+}
+
+.house-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.house-details.open {
+    opacity: 1;
+    max-height: none;
+    padding-top: 10px;
+}
+
+button {
+    background: none;
+    border: 2px solid #c400ff;
+    color: #fff;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #c400ff;
+}
+
+/* Секция "Контакты" */
+#contacts .content {
+    text-align: center;
+}
+
+#contacts p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Плавающая кнопка */
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #c400ff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 0 10px #c400ff;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px #c400ff; }
+    50% { box-shadow: 0 0 20px #c400ff; }
+    100% { box-shadow: 0 0 10px #c400ff; }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .houses-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
